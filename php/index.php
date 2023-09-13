@@ -1,6 +1,6 @@
 <?php
 $host = 'db'; //Nom donné dans le docker-compose.yml
-$user = 'ebimpe';
+$user = 'root';
 $password = 'N7f68a&e69E+';
 $db = 'recettes';
 
