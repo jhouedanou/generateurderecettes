@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+ php:
+  build:
+   context: .
+   dockerfile: dockerfile
+  container_name: php80
+  image: php:8.0-apache
+  volumes:
+   - ./php:/var/www/html/
+  ports:
+   - 80:80
+   
+ db:
+  container_name: mysql8
+  image: mysql:8.0
+  command: --default-authentication-plugin=mysql_native_password
+  environment:
+   MYSQL_ROOT_PASSWORD: N7f68a&e69E+
+   MYSQL_DATABASE: recettes
+   MYSQL_USER: user
+   MYSQL_PASSWORD: N7f68a&e69E+
+  ports:
+   - 3306:3306
+ phpmya:
+  image: phpmyadmin/phpmyadmin:latest
+  container_name: phpmyadmin
+  environment:
+   PMA_ARBITRARY: 1
+   PMA_HOST: db
+   PMA_USER: user
+   PMA_PASSWORD: N7f68a&e69E+
+   UPLOAD_LIMIT: 20M
+  ports:
+   - 8899:80
