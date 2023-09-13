@@ -14,5 +14,4 @@ Install Docker on your machine if you haven't already done so. You can download 
 
 `docker-compose up
 
-
 Access the application by visiting http://localhost in your web browser.
