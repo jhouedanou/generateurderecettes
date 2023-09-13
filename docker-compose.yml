@@ -17,16 +17,14 @@ services:
     build:
       context: .
       dockerfile: dockerfile
-    container_name: php8
-    environment:
-      MYSQL_HOST: db
-      MYSQL_DATABASE: recettes
-      MYSQL_USER: user
-      MYSQL_PASSWORD: N7f68a&e69E+
+    container_name: php80
+    depends_on:
+      - db
+    image: php:8.0-apache
+    volumes:
+      - ./php:/var/www/html/
     ports:
       - 80:80
-    volumes:
-      - .:/var/www/html
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin

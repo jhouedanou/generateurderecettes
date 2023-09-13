@@ -1,4 +1,20 @@
-<?php 
 
-            $db = new PDO('mysql:host=localhost;dbname=recettes;charset=utf8', 'user', ' N7f68a&e69E+');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php 
+
+try {
+    $db = new PDO('mysql:host=db;dbname=recettes;charset=utf8', 'user', 'N7f68a&e69E+');
+    echo "Connected to database successfully!";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
 ?>
+</body>
+</html>
