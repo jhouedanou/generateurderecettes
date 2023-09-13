@@ -1,13 +1,4 @@
-<?php
-$host = 'db'; //Nom donné dans le docker-compose.yml
-$user = 'root';
-$password = 'N7f68a&e69E+';
-$db = 'recettes';
+<?php 
 
-$conn = new mysqli($host,$user,$password,$db);
-if(!$conn) {echo "Erreur de connexion à MySQL<br />";}
-else{
-        echo "Connexion à MSSQL ok<br />";
-        mysqli_close($conn);
-}
+            $db = new PDO('mysql:host=localhost;dbname=easteregg;charset=utf8', 'root', 'root');
 ?>
