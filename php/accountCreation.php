@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Dabali Chap Chap</title>
 </head>
 <body>
-	Veuillez créer un compte pour jouer au jeu
+	<p>Veuillez vous connecter avec votre compte Dinor App afin de jouer, svp</p>
 </body>
 </html>
